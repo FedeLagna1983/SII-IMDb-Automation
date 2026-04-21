@@ -146,6 +146,23 @@ python -m behave --tags @top_box_office -D browser=firefox -D headless=false -D 
 
 ---
 
+### Run In Jenkins
+
+Add the included `Jenkinsfile` to a Pipeline job using this repository.
+
+Parameters:
+- `TEST_SUITE`: `all`, `pytest`, or `behave`
+- `PYTEST_ARGS`: extra arguments for pytest
+- `BEHAVE_TAGS`: optional tag expression (example: `@nicolas_cage`)
+- `BEHAVE_EXTRA_ARGS`: extra arguments for behave
+- `INSTALL_BROWSERS`: install Playwright browsers before execution
+
+Artifacts and reports:
+- JUnit XML: `reports/**/*.xml`
+- Archived artifacts: `reports/**` and `screenshots/**`
+
+---
+
 ### Run specific browser
 
 #### Chromium
