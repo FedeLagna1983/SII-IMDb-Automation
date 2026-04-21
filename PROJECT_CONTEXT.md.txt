@@ -1,0 +1,80 @@
+# PROJECT CONTEXT — SII QA Automation Challenge
+
+## Overview
+
+This project is a QA Automation Challenge for SII.
+
+The goal is to build a professional, maintainable, and scalable automation framework using modern tools and best practices.
+
+The automation is focused on IMDb.com and must cover multiple end-to-end scenarios using Playwright.
+
+---
+
+## Tech Stack
+
+- Language: Python
+- Framework: Playwright
+- Test Runner: Pytest
+- Design Pattern: Page Object Model (POM)
+- Browsers: Chromium (Chrome) and Firefox
+
+Playwright allows cross-browser automation (Chromium, Firefox, WebKit) which is key for this challenge. :contentReference[oaicite:0]{index=0}
+
+---
+
+## Project Goals
+
+- Automate 5 end-to-end scenarios on IMDb
+- Ensure cross-browser compatibility (Chrome + Firefox)
+- Implement clean and maintainable architecture
+- Use best practices for selectors, waits, and structure
+- Capture screenshots where required
+- Handle dynamic data (dates, lists, optional elements)
+- Provide a production-ready framework structure
+
+---
+
+## Test Scenarios
+
+### 1. Nicolas Cage Scenario
+- Go to IMDb
+- Search for "Nicolas Cage"
+- Open profile
+- Expand "Upcoming" section
+- Click first movie with "Completed" tag
+
+### 2. Top Box Office Rating
+- Open Menu
+- Navigate to Top Box Office
+- Click 2nd item
+- Click IMDb Rating
+- Rate with 5 stars
+
+### 3. Breaking Bad Photos
+- Open Menu
+- Go to Top 250 TV Shows
+- Select Breaking Bad
+- Go to Photos
+- Filter by Danny Trejo
+- Click 2nd photo
+
+### 4. Born Yesterday
+- Open Menu → Born Today
+- Clear default search
+- Filter by yesterday
+- Click 3rd result
+- Take screenshot
+
+### 5. Born 40 Years Ago
+- Open Menu → Born Today
+- Filter by today's date minus 40 years
+- Use date picker + string input
+- Click first result
+- Click first link in description (if exists)
+- Take screenshot
+
+---
+
+## Framework Design
+
+### Structure
